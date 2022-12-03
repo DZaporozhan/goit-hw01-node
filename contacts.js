@@ -61,3 +61,15 @@ module.exports = {
   removeContact,
   addContact,
 };
+
+function maxId(list) {
+  let maxId = Number(list[0].id);
+
+  for (let i = 1; i < list.length; i += 1) {
+    if (Number(list[i].id) > maxId) {
+      maxId = Number(list[i].id);
+    }
+  }
+
+  return String(maxId + 1);
+}
